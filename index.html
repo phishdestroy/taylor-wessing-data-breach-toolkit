@@ -4,36 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Redaction Auditor — Taylor Wessing / Valve GDPR Leak Forensic Suite</title>
-    
-    <!-- Powerful SEO & Metadata Safeguards -->
+    <meta name="google-site-verification" content="YsmLdobMeCAkZwplQQj_RAfnkXl4fWhG4h3FvnxSp8o" />
     <meta name="description" content="Forensic auditing utility to expose and unmask failed visual-only PDF redactions created by Taylor Wessing LLP for Valve Corporation. Verify GDPR/DSGVO compliance and extract hidden text layers offline.">
     <meta name="keywords" content="Taylor Wessing, Taylor Wessing LLP, GDPR data breach, DSGVO Datenleck, Valve Corporation, Steam data leak, Aspose.PDF redaction, redaction fail, unmask PDF, recover redacted text, HmbBfDI, Article 15 GDPR, subject access request leak, forensic PDF auditor">
     <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="PDF Redaction Auditor & Sanitizer — GDPR Forensic Tool">
     <meta property="og:description" content="Expose failed visual-only PDF redactions by Taylor Wessing LLP. Audits Aspose.PDF structures and recovers unredacted PII text offline.">
     <meta property="og:image" content="https://destroyico.pages.dev/assets/logo.png">
-    
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="PDF Redaction Auditor — Taylor Wessing / Valve GDPR Leak Utility">
     <meta property="twitter:description" content="Expose and sanitize insecure visual PDF redactions. Designed to audit data exposures caused by Taylor Wessing LLP.">
-    
-    <!-- Branded Assets & Icons -->
     <link rel="shortcut icon" href="https://destroyico.pages.dev/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="https://destroyico.pages.dev/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://destroyico.pages.dev/assets/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="https://destroyico.pages.dev/assets/apple-touch-icon.png">
     <link rel="manifest" href="https://destroyico.pages.dev/assets/site.webmanifest">
-    <!-- PDF.js & PDF-Lib Library Loader -->
-    <!-- We try local paths first to enable 100% internet-free offline auditing. -->
-    <!-- If those are missing, we dynamically fall back to CDNs. -->
     <script src="lib/pdf.min.js"></script>
     <script src="lib/pdf-lib.min.js"></script>
     <script>
-        // Fallback loader to load from CDN if local files are missing
         function loadFallbackScript(src, checkVar, callback) {
             if (window[checkVar] === undefined) {
                 console.warn(`Local file/variable [${checkVar}] not found, trying CDN: ${src}`);
@@ -46,9 +35,7 @@
             }
         }
         
-        // Trigger CDNs if the local library files did not load
         loadFallbackScript('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js', 'pdfjsLib', () => {
-            // Setup worker fallback
             if (typeof pdfjsLib !== 'undefined' && !pdfjsLib.GlobalWorkerOptions.workerSrc) {
                 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
             }
@@ -93,8 +80,6 @@
             max-width: 1500px;
             margin: 0 auto;
         }
-
-        /* Investigative Report Header Style */
         header {
             display: flex;
             justify-content: space-between;
@@ -154,7 +139,6 @@
             letter-spacing: 1px;
         }
 
-        /* Dashboard Grid Layout */
         .dashboard-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -167,7 +151,6 @@
             }
         }
 
-        /* Sidebar Panels */
         .sidebar {
             display: flex;
             flex-direction: column;
@@ -195,7 +178,6 @@
             padding-bottom: 10px;
         }
 
-        /* Upload Drop Zone */
         .drop-zone {
             border: 1px dashed var(--border-primary);
             border-radius: 4px;
@@ -229,7 +211,6 @@
             color: var(--text-muted);
         }
 
-        /* Metadata & Info Items */
         .info-list {
             display: flex;
             flex-direction: column;
@@ -261,7 +242,6 @@
             font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
         }
 
-        /* Alert Callouts */
         .alert-box {
             padding: 16px;
             border-radius: 4px;
@@ -299,7 +279,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* Document Viewer Container */
         .viewer-card {
             display: flex;
             flex-direction: column;
@@ -338,7 +317,6 @@
             color: var(--text-secondary);
         }
 
-        /* Canvas Wrapper & Layering */
         .canvas-container {
             position: relative;
             box-shadow: 0 15px 35px rgba(0,0,0,0.8);
@@ -352,7 +330,6 @@
             display: block;
         }
 
-        /* Precision Bounding-Box Overlay Layer */
         .overlay-layer {
             position: absolute;
             top: 0;
@@ -377,7 +354,6 @@
             transition: all 0.1s ease;
         }
 
-        /* When black bars are visually stripped, text styling adapts */
         .overlay-box.unmasked-text {
             color: #1e293b !important;
             background-color: #ffffff !important;
@@ -387,7 +363,6 @@
             pointer-events: auto;
         }
 
-        /* Utility Buttons */
         .btn-ui {
             background-color: transparent;
             border: 1px solid var(--border-primary);
@@ -426,7 +401,6 @@
             box-shadow: 0 0 15px rgba(255, 71, 87, 0.3);
         }
 
-        /* Form Toggles */
         .toggle {
             display: flex;
             align-items: center;
@@ -446,7 +420,6 @@
             accent-color: var(--accent-red);
         }
 
-        /* Reports Section */
         .report-section {
             display: flex;
             flex-direction: column;
@@ -478,7 +451,6 @@
             font-size: 0.75rem;
         }
 
-        /* Report Templates Panels */
         .report-tabs {
             display: flex;
             gap: 10px;
@@ -528,7 +500,6 @@
             font-weight: bold;
         }
 
-        /* Guide Content Styles */
         .guide-tab-content {
             padding: 10px 0;
             width: 100%;
@@ -604,9 +575,7 @@
     </header>
 
     <div class="dashboard-grid">
-        <!-- Sidebar: Upload, Technical Analysis, Reports -->
         <div class="sidebar">
-            <!-- 1. Drop Zone & Input -->
             <div class="card">
                 <div class="card-header">Document Ingest</div>
                 <div class="drop-zone" id="dropZone">
@@ -617,14 +586,12 @@
                 <input type="file" id="fileInput" accept=".pdf" style="display: none;">
             </div>
 
-            <!-- 2. Technical Profile -->
             <div class="card" id="auditPanel" style="display: none;">
                 <div class="card-header">Technical Profile</div>
                 <div class="info-list" id="metaArea"></div>
                 <div id="verdictBox"></div>
             </div>
 
-            <!-- 3. GDPR Exposure Reports Generator -->
             <div class="card" id="reportsGeneratorCard" style="display: none;">
                 <div class="card-header">Breach Notification Drafts</div>
                 <div class="report-section">
@@ -641,11 +608,9 @@
                 </div>
             </div>
 
-            <!-- 4. Export & Utilities -->
             <div class="card" id="exportPanel" style="display: none;">
                 <div class="card-header">Export & Sanitization</div>
                 <div class="report-section">
-                    <!-- CLIENT SIDE DECENSOR DOWNLOAD -->
                     <p class="report-desc"><strong>Download Sanitized PDF:</strong> Strip visual black redaction shapes from this file completely inside your browser and download the unmasked version.</p>
                     <button class="btn-ui btn-action btn-danger" style="width: 100%; margin-bottom: 12px;" id="browserDecensorBtn">Strip & Download Clean PDF</button>
 
@@ -657,7 +622,6 @@
                 </div>
             </div>
 
-            <!-- 5. GDPR & Legal Activism Safeguard -->
             <div class="card" style="border-color: rgba(255, 71, 87, 0.35);">
                 <div class="card-header" style="color: var(--accent-red)">⚖️ Audit & Whistleblowing Safeguard</div>
                 <div class="report-section">
@@ -672,7 +636,6 @@
             </div>
         </div>
 
-        <!-- Main Display: Document Player & Coordinates -->
         <div class="viewer-card">
             <div class="viewer-toolbar" id="viewerToolbar" style="display: none;">
                 <div class="toolbar-group">
@@ -694,17 +657,14 @@
 
             <div id="viewerSplitScreen" style="display: none; width: 100%;">
                 <div style="display: grid; grid-template-columns: 1fr; gap: 24px; width: 100%;" id="splitScreenGrid">
-                    <!-- Column 1: Page Render Visualizer -->
                     <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
                         <div class="card-header" style="width: 100%; margin-bottom: 12px; font-size: 0.75rem;">Page Render Visualizer</div>
                         <div class="canvas-container" id="canvasContainer" style="width: 100%;">
                             <canvas id="pdfCanvas"></canvas>
-                            <!-- Bounding-box layer rendering text nodes over canvas -->
                             <div class="overlay-layer" id="overlayLayer"></div>
                         </div>
                     </div>
                     
-                    <!-- Column 2: X-Ray Raw Text Extractor -->
                     <div style="display: flex; flex-direction: column; width: 100%;" id="xrayPane">
                         <div class="card-header" style="width: 100%; margin-bottom: 12px; font-size: 0.75rem; color: var(--accent-green);">📡 X-Ray Raw Text Extractor</div>
                         <div class="template-viewer" id="xrayTextContainer" style="flex-grow: 1; height: 100%; min-height: 500px; max-height: 800px; background-color: #050507; border-color: rgba(34, 197, 94, 0.2); color: #22c55e; white-space: pre-wrap; font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; padding: 20px;">
@@ -715,7 +675,6 @@
             </div>
 
             <div id="welcomePanel" style="width: 100%;">
-                <!-- SaaS Hero Section -->
                 <div class="welcome-header" style="text-align: center; margin-bottom: 40px;">
                     <h2 style="font-size: 1.8rem; font-weight: 900; color: var(--text-primary); text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 12px; line-height: 1.2;">
                         Stop Leaking Your Secrets.<br><span style="color: var(--accent-red);">Audit Your PDFs.</span>
@@ -729,7 +688,6 @@
                     </div>
                 </div>
 
-                <!-- Two Auditing Modes Visual Breakdown -->
                 <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 40px;" id="welcomeGrid">
                     <div class="card" style="padding: 20px; text-align: left; background-color: #0d0d10;">
                         <h4 style="color: var(--accent-blue); font-size: 0.8rem; text-transform: uppercase; font-weight: 800; margin-bottom: 8px;">📡 Mode 1: X-Ray Scanner (Live Extraction)</h4>
@@ -745,7 +703,6 @@
                     </div>
                 </div>
 
-                <!-- Prominent High-SEO Case Study Card -->
                 <div class="card" style="border-color: rgba(245, 158, 11, 0.2); background: linear-gradient(180deg, rgba(245, 158, 11, 0.01) 0%, rgba(245, 158, 11, 0.03) 100%); text-align: left; padding: 24px; margin-bottom: 40px;">
                     <span style="background-color: rgba(245, 158, 11, 0.1); color: var(--accent-amber); font-weight: 800; font-size: 0.65rem; padding: 3px 8px; border-radius: 3px; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 12px;">Case Study #1</span>
                     <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); text-transform: uppercase; margin-bottom: 10px; letter-spacing: 0.5px;">The Taylor Wessing / Valve Catastrophe</h3>
@@ -774,14 +731,12 @@
                     </div>
                 </div>
 
-                <!-- Tabs for Local / Offline Guide -->
                 <div class="report-tabs" style="justify-content: center; margin-bottom: 25px;">
                     <button class="tab-btn active" id="tabGuideIntro" onclick="switchGuideTab('intro')">Methodology</button>
                     <button class="tab-btn" id="tabGuidePython" onclick="switchGuideTab('python')">Offline Python CLI</button>
                     <button class="tab-btn" id="tabGuideJS" onclick="switchGuideTab('js')">Browser Sanitizer JS</button>
                 </div>
 
-                <!-- 1. Methodology Panel -->
                 <div id="guideIntro" class="guide-tab-content" style="text-align: left;">
                     <h3 class="guide-heading">Visual Masking Vulnerability Explainer</h3>
                     <p class="guide-text">
@@ -802,7 +757,6 @@
                     </ol>
                 </div>
 
-                <!-- 2. Python CLI Panel -->
                 <div id="guidePython" class="guide-tab-content" style="display: none;">
                     <h3 class="guide-heading">Local Python CLI Auditing Tool</h3>
                     <p class="guide-text">
@@ -819,18 +773,13 @@
                     <div class="code-block"><span class="code-keyword">import</span> re, fitz
 
 <span class="code-keyword">def</span> <span class="code-function">strip_black_bars</span>(input_path, output_path):
-    <span class="code-comment"># Open the compromised document offline</span>
     doc = fitz.open(input_path)
     
     <span class="code-keyword">for</span> page <span class="code-keyword">in</span> doc:
-        <span class="code-comment"># Iterate through each drawing content stream on the page</span>
         <span class="code-keyword">for</span> stream_id <span class="code-keyword">in</span> page.get_contents():
             stream_data = doc.xref_stream(stream_id)
-            <span class="code-comment"># Decode in Latin-1 to safely preserve any binary stream markers</span>
             text = stream_data.decode(<span class="code-string">'latin-1'</span>)
             
-            <span class="code-comment"># Locate rect drawing "re" followed by fill/stroke operator (f/F/b/B)</span>
-            <span class="code-comment"># and swap with "n" (new path / no-fill). Preserves exact spacing/newlines!</span>
             modified_text, count = re.subn(
                 r<span class="code-string">'\bre\s+([fFbB]\*?)(?=\s|$)'</span>,
                 <span class="code-keyword">lambda</span> m: <span class="code-string">f"re{m.group(0)[2:-len(m.group(1))]}n"</span>,
@@ -840,12 +789,10 @@
             <span class="code-keyword">if</span> count &gt; <span class="code-string">0</span>:
                 doc.update_stream(stream_id, modified_text.encode(<span class="code-string">'latin-1'</span>))
                 
-    <span class="code-comment"># Write output with stream deflation and structural optimization</span>
     doc.save(output_path, garbage=<span class="code-string">4</span>, deflate=<span class="code-keyword">True</span>, clean=<span class="code-keyword">True</span>)
     doc.close()</div>
                 </div>
 
-                <!-- 3. JS Panel -->
                 <div id="guideJS" class="guide-tab-content" style="display: none;">
                     <h3 class="guide-heading">Browser-Based 100% Client-Side Engine</h3>
                     <p class="guide-text">
@@ -854,49 +801,35 @@
                     
                     <h3 class="guide-heading">Core JavaScript Sanitizer Code</h3>
                     <div class="code-block"><span class="code-keyword">async function</span> <span class="code-function">sanitizePdfClientSide</span>(rawPdfBytes) {
-    <span class="code-comment">// Load document from local byte array into pdf-lib</span>
     <span class="code-keyword">const</span> { PDFDocument, PDFName, decodePDFRawStream } = PDFLib;
     <span class="code-keyword">const</span> pdfDocInstance = <span class="code-keyword">await</span> PDFDocument.load(rawPdfBytes);
     <span class="code-keyword">const</span> context = pdfDocInstance.context;
     <span class="code-keyword">const</span> indirectObjects = context.enumerateIndirectObjects();
     
-    <span class="code-comment">// Enumerate and scan ALL indirect streams in the document context (Page Contents, Form XObjects, patterns)</span>
     <span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = 0; i &lt; indirectObjects.length; i++) {
         <span class="code-keyword">const</span> [ref, pdfObject] = indirectObjects[i];
         
-        // Duck-typing check: Is this object a stream? (survives JS minification/obfuscation)
         <span class="code-keyword">if</span> (pdfObject &amp;&amp; <span class="code-keyword">typeof</span> pdfObject.getContents === <span class="code-string">'function'</span> &amp;&amp; pdfObject.dict) {
             <span class="code-keyword">const</span> dict = pdfObject.dict;
             <span class="code-keyword">const</span> type = dict.get(PDFName.of(<span class="code-string">'Type'</span>));
             <span class="code-keyword">const</span> subtype = dict.get(PDFName.of(<span class="code-string">'Subtype'</span>));
             
-            <span class="code-comment">// Skip binary streams like Fonts, Images, and Halftones to prevent overhead</span>
             <span class="code-keyword">if</span> (type === PDFName.of(<span class="code-string">'Font'</span>) || subtype === PDFName.of(<span class="code-string">'Image'</span>) || type === PDFName.of(<span class="code-string">'Halftone'</span>)) {
                 <span class="code-keyword">continue</span>;
             }
             
             <span class="code-keyword">try</span> {
-                <span class="code-comment">// Decompress and read raw bytes using the official decodePDFRawStream decoder</span>
-                <span class="code-comment">const rawData = decodePDFRawStream(pdfObject).decode();</span>
-                
-                <span class="code-comment">// Decode losslessly using Latin-1 byte mapping</span>
-                <span class="code-comment">const text = Array.from(rawData, byte =&gt; String.fromCharCode(byte)).join('');</span>
-                
-                <span class="code-comment">// Locate "re" (rectangle) drawing instructions followed by filled operators (f, F, b, B, f*, F*, b*, B*)</span>
-                // and replace the filling operator with "n" (new path / no-fill), preserving exact separator spacing/newlines</span>
+                <span class="code-keyword">const</span> rawData = decodePDFRawStream(pdfObject).decode();
+                <span class="code-keyword">const</span> text = Array.from(rawData, byte =&gt; String.fromCharCode(byte)).join('');
                 <span class="code-keyword">const</span> modifiedText = text.replace(<span class="code-string">/re(\s+)([fFbB]\*?)(?=\s|$)/g</span>, <span class="code-string">'re$1n'</span>);
                 
                 <span class="code-keyword">if</span> (text !== modifiedText) {
-                    <span class="code-comment">// Losslessly re-encode Latin-1 string back to Uint8Array bytes</span>
                     <span class="code-keyword">const</span> modifiedData = <span class="code-keyword">new</span> <span class="code-class">Uint8Array</span>(modifiedText.length);
                     <span class="code-keyword">for</span> (<span class="code-keyword">let</span> k = 0; k &lt; modifiedText.length; k++) {
                         modifiedData[k] = modifiedText.charCodeAt(k) &amp; <span class="code-string">0xff</span>;
                     }
                     
-                    <span class="code-comment">// Create a new compressed stream</span>
                     <span class="code-keyword">const</span> newStreamObj = context.flateStream(modifiedData);
-                    
-                    <span class="code-comment">// Preserve original stream dictionary keys (like Subtype, BBox, Resources etc. for Form XObjects)</span>
                     <span class="code-keyword">const</span> keys = dict.keys();
                     <span class="code-keyword">for</span> (<span class="code-keyword">let</span> k = 0; k &lt; keys.length; k++) {
                         <span class="code-keyword">const</span> key = keys[k];
@@ -905,7 +838,6 @@
                         }
                     }
                     
-                    // Assign the new stream back to the original reference in-place
                     context.assign(ref, newStreamObj);
                 }
             } catch (err) {
@@ -913,7 +845,6 @@
             }
         }
     }
-    <span class="code-comment">// Recompress stream structures and serialize back to bytes</span>
     <span class="code-keyword">return await</span> pdfDocInstance.save();
 }</div>
                 </div>
@@ -923,7 +854,6 @@
 </div>
 
 <script>
-    // Tab switching for the local guide walkthrough
     function switchGuideTab(tabId) {
         document.getElementById('tabGuideIntro').classList.toggle('active', tabId === 'intro');
         document.getElementById('tabGuidePython').classList.toggle('active', tabId === 'python');
@@ -934,7 +864,6 @@
         document.getElementById('guideJS').style.display = tabId === 'js' ? 'block' : 'none';
     }
 
-    // Set worker source path offline-first. PDF.js will automatically fall back to threadless fake-worker mode if worker files fail CORS checks in local file:// browser access.
     if (typeof pdfjsLib !== 'undefined') {
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'lib/pdf.worker.min.js';
     }
@@ -974,16 +903,13 @@
     let pageRendering = false;
     let pageNumPending = null;
     let auditLog = {};
-    let activeTab = "TW"; // Default template tab
+    let activeTab = "TW";
     const ctx = pdfCanvas.getContext('2d');
 
-    // PDF Date Parser Helper (Converts D:YYYYMMDDHHmmss to Normal String)
     function formatPDFDate(pdfDate) {
         if (!pdfDate) return "N/A";
-        // Remove D: if present
         let dateStr = pdfDate.startsWith("D:") ? pdfDate.substring(2) : pdfDate;
         
-        // Clean symbols like single quotes
         dateStr = dateStr.replace(/[']/g, "");
 
         if (dateStr.length < 8) return pdfDate;
@@ -1001,7 +927,6 @@
             const sec = dateStr.substring(12, 14);
             timeStr = `, ${hour}:${min}:${sec}`;
 
-            // Handle timezone offset (e.g. +0200)
             if (dateStr.length > 14) {
                 const tzSign = dateStr.substring(14, 15);
                 if (tzSign === "+" || tzSign === "-") {
@@ -1021,7 +946,6 @@
         return `${monthName} ${parseInt(day, 10)}, ${year}${timeStr}${tzStr}`;
     }
 
-    // Parse raw timestamp to Date object for delta calculation
     function pdfDateToJSDate(pdfDate) {
         if (!pdfDate) return null;
         let dateStr = pdfDate.startsWith("D:") ? pdfDate.substring(2) : pdfDate;
@@ -1037,7 +961,6 @@
         return new Date(Date.UTC(year, month, day, hour, min, sec));
     }
 
-    // Format delta between two dates in human readable form
     function formatTimeDelta(creationDateStr, modDateStr) {
         const d1 = pdfDateToJSDate(creationDateStr);
         const d2 = pdfDateToJSDate(modDateStr);
@@ -1162,7 +1085,6 @@
 
         metaArea.innerHTML = html;
 
-        // Populate global audit log
         auditLog = {
             filename: fileName,
             pageCount: totalPages,
@@ -1205,11 +1127,9 @@
             `;
         }
 
-        // Generate the breach notification drafts
         updateReportTemplates(info, formattedCreation, totalPages);
     }
 
-    // Generate Formal Breach Notification Draft Letters
     function updateReportTemplates(info, formattedCreation, totalPages) {
         const d_producer = info.Producer || "Aspose.PDF for .NET 20.8";
         const d_creator = info.Creator || "Aspose Ltd.";
@@ -1271,7 +1191,6 @@ We request that the HmbBfDI initiates an immediate investigation under GDPR Arti
 Sincerely,
 PhishDestroy Intelligence Suite / Independent Audit Team`;
 
-        // Associate templates to elements
         tabTW.onclick = () => {
             activeTab = "TW";
             tabTW.className = "tab-btn active";
@@ -1286,7 +1205,6 @@ PhishDestroy Intelligence Suite / Independent Audit Team`;
             templateViewer.innerText = regTemplate;
         };
 
-        // Initialize active tab text
         if (activeTab === "TW") {
             templateViewer.innerText = twTemplate;
         } else {
@@ -1294,7 +1212,6 @@ PhishDestroy Intelligence Suite / Independent Audit Team`;
         }
     }
 
-    // Copy template to clipboard
     copyTemplateBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(templateViewer.innerText).then(() => {
             copySuccessMsg.style.display = 'block';
@@ -1341,7 +1258,6 @@ PhishDestroy Intelligence Suite / Independent Audit Team`;
             const items = textContent.items;
             const isVisualDecensorActive = toggleVisualDecensor.checked;
             
-            // X-Ray Text Accumulators
             let xrayText = "";
             let lastY = -1;
             
@@ -1361,21 +1277,16 @@ PhishDestroy Intelligence Suite / Independent Audit Team`;
                 const fontSize = Math.sqrt(tx[0]*tx[0] + tx[1]*tx[1]);
                 el.style.fontSize = `${fontSize}px`;
 
-                // If visual decensor is active, we style the boxes to act as whiteouts on the canvas
                 if (isVisualDecensorActive) {
                     el.classList.add('unmasked-text');
-                    // Compute approximate dimensions to whiteout the canvas area
                     const widthApprox = item.width * viewport.scale;
                     
-                    // Draw a white block directly onto the canvas at these coordinates to cover up the black vector fill!
                     ctx.fillStyle = "#ffffff";
-                    // Map transform coordinates back to canvas dimensions
                     ctx.fillRect(tx[4], tx[5] - fontSize, widthApprox, fontSize * 1.3);
                 }
                 
                 overlayLayer.appendChild(el);
                 
-                // Track line coordinates for X-Ray plain text rendering
                 const yCoord = tx[5];
                 if (lastY !== -1 && Math.abs(yCoord - lastY) > 5) {
                     xrayText += "\n";
@@ -1384,7 +1295,6 @@ PhishDestroy Intelligence Suite / Independent Audit Team`;
                 lastY = yCoord;
             });
             
-            // Display raw text in X-Ray Pane
             const xrayTextContainer = document.getElementById('xrayTextContainer');
             if (xrayText.trim()) {
                 xrayTextContainer.innerText = xrayText;
@@ -1404,7 +1314,6 @@ PhishDestroy Intelligence Suite / Independent Audit Team`;
 
     toggleOverlay.addEventListener('change', setOverlayVisibility);
     
-    // Toggle Visual Decensor (redraw page to apply canvas fills)
     toggleVisualDecensor.addEventListener('change', () => {
         if (pdfDoc) {
             renderDocumentPage(pageNum);
@@ -1431,7 +1340,6 @@ PhishDestroy Intelligence Suite / Independent Audit Team`;
         queueRender(pageNum);
     });
 
-    // JSON Export
     exportReportBtn.addEventListener('click', function() {
         const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(auditLog, null, 4));
         const a = document.createElement('a');
@@ -1442,9 +1350,6 @@ PhishDestroy Intelligence Suite / Independent Audit Team`;
         a.remove();
     });
 
-    // ==========================================
-    // PDF-LIB DECENSOR (100% Client-Side File Sanitizer)
-    // ==========================================
     browserDecensorBtn.addEventListener('click', async function() {
         if (!rawPdfBytes) return;
 
@@ -1452,7 +1357,6 @@ PhishDestroy Intelligence Suite / Independent Audit Team`;
         browserDecensorBtn.disabled = true;
 
         try {
-            // Load the raw PDF document into pdf-lib
             const { PDFDocument, PDFName, decodePDFRawStream } = PDFLib;
             const pdfDocInstance = await PDFDocument.load(rawPdfBytes);
             const context = pdfDocInstance.context;
@@ -1460,44 +1364,34 @@ PhishDestroy Intelligence Suite / Independent Audit Team`;
             
             let strippedCount = 0;
 
-            // Enumerate and scan ALL indirect streams in the document context (Page Contents, Form XObjects, patterns)
             for (let i = 0; i < indirectObjects.length; i++) {
                 const [ref, pdfObject] = indirectObjects[i];
                 
-                // Duck-typing check: Is this object a stream? (has getContents and dict, survives minification)
                 if (pdfObject && typeof pdfObject.getContents === 'function' && pdfObject.dict) {
                     const dict = pdfObject.dict;
                     const type = dict.get(PDFName.of('Type'));
                     const subtype = dict.get(PDFName.of('Subtype'));
                     
-                    // Skip binary streams like Fonts, Images, and Halftones to prevent overhead
                     if (type === PDFName.of('Font') || subtype === PDFName.of('Image') || type === PDFName.of('Halftone')) {
                         continue;
                     }
                     
                     try {
-                        // Decompress and read raw bytes using the official decodePDFRawStream decoder
                         const decodedStream = decodePDFRawStream(pdfObject);
                         const rawData = decodedStream.decode();
                         
-                        // Decode losslessly using Latin-1 byte mapping
                         const text = Array.from(rawData, byte => String.fromCharCode(byte)).join('');
-                        
-                        // Locate "re" (rectangle) drawing instructions followed by filled operators (f, F, b, B, f*, F*, b*, B*)
-                        // and replace the filling operator with "n" (new path / no-fill), preserving exact separator spacing/newlines
+                    
                         const modifiedText = text.replace(/re(\s+)([fFbB]\*?)(?=\s|$)/g, 're$1n');
                         
                         if (text !== modifiedText) {
-                            // Losslessly re-encode Latin-1 string back to Uint8Array bytes
                             const modifiedData = new Uint8Array(modifiedText.length);
                             for (let k = 0; k < modifiedText.length; k++) {
                                 modifiedData[k] = modifiedText.charCodeAt(k) & 0xff;
                             }
                             
-                            // Create a new compressed stream
                             const newStreamObj = context.flateStream(modifiedData);
                             
-                            // Preserve original stream dictionary keys (like Subtype, BBox, Resources etc. for Form XObjects)
                             const keys = dict.keys();
                             for (let k = 0; k < keys.length; k++) {
                                 const key = keys[k];
@@ -1506,23 +1400,17 @@ PhishDestroy Intelligence Suite / Independent Audit Team`;
                                 }
                             }
                             
-                            // Assign the new stream back to the original reference in-place
                             context.assign(ref, newStreamObj);
                             strippedCount++;
                         }
                     } catch (err) {
-                        // Safe skip if stream decompress/parse fails
                         continue;
                     }
                 }
             }
 
             console.log(`[+] Stripped content and Form XObject streams across ${strippedCount} elements.`);
-
-            // Serialize the modified PDF to bytes (automatically recompresses and recalculates xref offsets!)
             const modifiedPdfBytes = await pdfDocInstance.save();
-
-            // Trigger file download in browser
             const blob = new Blob([modifiedPdfBytes], {type: 'application/pdf'});
             const downloadUrl = URL.createObjectURL(blob);
             const a = document.createElement('a');
