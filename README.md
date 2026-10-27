@@ -7,14 +7,25 @@
   <img src="https://img.shields.io/badge/Status-Active_OSINT_Forensics-orange.svg?style=for-the-badge" alt="Status: Active OSINT">
 </p>
 
+<p align="center"><picture><source media="(max-width:600px) and (prefers-reduced-motion:reduce)" srcset="assets/readme-presentation/hero-mobile-poster.webp" /><source media="(prefers-reduced-motion:reduce)" srcset="assets/readme-presentation/hero-poster.webp" /><source media="(max-width:600px)" srcset="assets/readme-presentation/hero-mobile.webp" /><img src="assets/readme-presentation/hero.webp" width="100%" alt="Investigation overview" /></picture></p>
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/phishdestroy/taylor-wessing-data-breach-toolkit/main/image.png" width="80%" alt="Cover">
+<a href="https://phishdestroy.github.io/taylor-wessing-data-breach-toolkit/"><img src="assets/readme-presentation/auditor.svg" width="238" height="56" alt="OPEN AUDITOR: Launch the browser tool" /></a>
+<a href="https://raw.githubusercontent.com/phishdestroy/taylor-wessing-data-breach-toolkit/main/pdf-redaction-auditor.zip"><img src="assets/readme-presentation/download.svg" width="238" height="56" alt="DOWNLOAD: Get the offline ZIP package" /></a>
+<a href="https://phishdestroy.io/valve-profits-from-stolen-accounts"><img src="assets/readme-presentation/case.svg" width="238" height="56" alt="INVESTIGATION: Read the full case study" /></a>
 </p>
+
+<details>
+<summary><strong>Original cover artwork · open full-size originals</strong></summary>
+
+<p align="center"><a href="image.png"><img src="assets/readme-presentation/original-cover-1.webp" width="100%" alt="Original cover artwork" /></a></p>
+
+</details>
 
 > [!IMPORTANT]
 > ### 🛡️ A Tool for Victims of Corporations: High-Priced Lawyers Do Not Equal Competence.
 
----
+<p align="center"><img src="assets/readme-presentation/divider.svg" width="100%" alt="" /></p>
 
 ## 🔍 Executive Summary
 
@@ -23,7 +34,7 @@ The **Universal PDF Redaction Auditor & Layer Decomposer** is a professional, of
 ### ⚖️ Technical Power Asymmetry & Opponent Vulnerability
 This auditing utility is built to address a critical power imbalance in corporate data processing. When massive conglomerates (such as **Valve Corporation**) are represented by elite law firms (such as **Taylor Wessing LLP**), any systematic data exposure doesn't hurt the corporation or their high-priced lawyers—it catastrophically compromises the privacy of their **opponents** (the individual data subjects, third-party users, and minors whose sensitive personal data is leaked due to legal and technical negligence). This toolkit empowers individuals and independent auditors to verify data safety and hold corporate actors accountable.
 
----
+<p align="center"><img src="assets/readme-presentation/divider.svg" width="100%" alt="" /></p>
 
 ## 📊 Case Study: The Taylor Wessing / Valve GDPR Leak
 
@@ -39,7 +50,7 @@ Please note: **This toolkit is NOT limited to a single-firm exploit.** It is a u
 
 We sincerely hope that other international law firms are more responsible with client confidentiality and aren't too cheap to pay for standard, certified redaction software instead of writing custom, broken "DIY" script pipelines. This in-house development was a catastrophic mistake—especially considering that the outdated version of the engine they chose to compile (*Aspose.PDF 20.8*) is known to suffer from severe, unpatched security vulnerabilities, including **Remote Code Execution (RCE)**. But apparently, self-proclaimed "IT lawyers" don't care about basic system security or unpatched code execution flaws. :)
 
----
+<p align="center"><img src="assets/readme-presentation/divider.svg" width="100%" alt="" /></p>
 
 > [!CAUTION]
 > ### 🚨 DIALOGUE WITH DR. PATRICK (THE COVER-UP)
@@ -70,7 +81,7 @@ Instead of initiating a GDPR Article 33 breach notification, he chose to write t
 > 
 > Patrick Zurheide"
 
----
+<p align="center"><img src="assets/readme-presentation/divider.svg" width="100%" alt="" /></p>
 
 ### 🔍 PhishDestroy Translation & Analysis for the Non-German IT Community:
 
@@ -95,7 +106,7 @@ When the people gatekeeping EU data privacy treat severe security vulnerabilitie
 * **📰 Read Part 1 (Medium Writeup):** [Exposing the Valve Data Breach & Corporate GDPR Negligence](https://phishdestroy.medium.com/my-dog-vs-elite-gdpr-lawyers-the-valve-data-breach-nobody-is-talking-about-f6f7683d813d)
 * **📰 Read Part 2 (Medium Writeup):** [Exposing the 5-Year PDF Redaction Vulnerability inside Global Corporations](https://phishdestroy.medium.com/my-dog-vs-elite-lawyers-part-2-the-5-year-pdf-vulnerability-exposing-global-corporations-81cdad269253)
 
----
+<p align="center"><img src="assets/readme-presentation/divider.svg" width="100%" alt="" /></p>
 
 ## 🛠️ MULTI-TOOL CAPABILITIES
 
@@ -127,7 +138,7 @@ A surgical, global stream-level sanitization engine:
 * **Operator Purge:** Replaces rectangular visual paint commands (`re f`, `re F`, `re b`, `re B`, etc.) with the `n` (no-paint) operator. It physically deletes the black bars, dropping Page 1 black drawings to **exactly 0**, leaving a clean, naked document for download.
 </details>
 
----
+<p align="center"><img src="assets/readme-presentation/divider.svg" width="100%" alt="" /></p>
 
 ## 💻 CLI USAGE (`decensor.py`)
 
@@ -164,7 +175,7 @@ python decensor.py -i compromised.pdf -o unmasked.pdf
 ```
 </details>
 
----
+<p align="center"><img src="assets/readme-presentation/divider.svg" width="100%" alt="" /></p>
 
 ## 🔍 CODE WALKTHROUGH
 
@@ -262,7 +273,7 @@ async function sanitizePdfClientSide(rawPdfBytes) {
 ```
 </details>
 
----
+<p align="center"><img src="assets/readme-presentation/divider.svg" width="100%" alt="" /></p>
 
 ## ⚖️ ANTI-CENSORSHIP GUARANTEE (SECURITY.md)
 
@@ -270,7 +281,7 @@ Any legal warnings, DMCA takedown requests, or hostile actions initiated by Tayl
 
 Such actions will trigger immediate, automated mirroring across decentralized filesystems and escalation of complaints directly to the European Data Protection Board (EDPB).
 
----
+<p align="center"><img src="assets/readme-presentation/divider.svg" width="100%" alt="" /></p>
 
 ## ⚖️ Trademark Defense & Nominative Fair Use Clause
 
@@ -288,7 +299,7 @@ The name of this repository serves as a Search Engine Optimization (SEO) beacon.
 ### 3. Warning Against Fraudulent Takedowns
 Any attempt to abuse Trademark law or GitHub's takedown procedures to silence this repository will not be viewed as a legitimate intellectual property dispute. It will be documented as a bad-faith attempt to use copyright/trademark law to censor a security tool and hide your ongoing GDPR Article 32 violations.
 
----
+<p align="center"><img src="assets/readme-presentation/divider.svg" width="100%" alt="" /></p>
 
 > [!NOTE]
 > ### 🔒 ZERO-KNOWLEDGE PRIVACY GUARANTEE
